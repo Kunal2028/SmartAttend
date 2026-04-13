@@ -1,22 +1,4 @@
-"""
-face_engine.py
-The heart of SmartAttend.
 
-Wraps InsightFace to provide:
-  - detect_faces()     : RetinaFace detection + alignment on any image
-  - get_embedding()    : ArcFace 512-dim L2-normalised vector
-  - enroll_student()   : average embedding from multiple photos
-  - identify_face()    : 1:N cosine search against all student embeddings
-  - run_classroom()    : full pipeline on a classroom image
-
-Improvements over v1:
-  - Adaptive det_size based on actual image dimensions
-  - Multi-scale tiled detection for large / wide classroom shots
-  - CLAHE preprocessing to handle poor lighting and low contrast
-  - Soft NMS (weighted box fusion) to de-duplicate tiled detections
-  - Padded face crops for better alignment quality
-  - Separate MIN_SCORE thresholds for enrollment vs. classroom scan
-"""
 
 import os
 import uuid
