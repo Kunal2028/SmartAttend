@@ -48,7 +48,7 @@ Opens at http://localhost:8501
 - See annotated image with names + confidence scores
 - Save attendance and/or send emails
 
-### Step 3 — Reports
+### Step 3 — Report
 - View weekly trends, per-student history
 - Export CSV
 - Low attendance alerts
@@ -98,14 +98,6 @@ Email Notifications (SMTP)
 | .npy files for embeddings | Faster than DB BLOB, easy to update per student |
 | SQLite | Zero-config, perfect for single-server deployment |
 
-## Tuning
-
-| Setting | Effect |
-|---|---|
-| `FACE_MATCH_THRESHOLD=0.3` | Stricter — fewer false positives, may miss some |
-| `FACE_MATCH_THRESHOLD=0.5` | Looser — more matches, higher false positive risk |
-| `FACE_MODEL=buffalo_s` | Faster but less accurate than buffalo_l |
-| More enrollment photos | Better accuracy, especially for varied lighting |
 
 ## Project structure
 
